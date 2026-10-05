@@ -23,6 +23,13 @@ char	*get_next_line(int fd)
 		return (NULL);
 	if(read_until_newline(fd, buffer, &leftover) < 0)
 		return (free(buffer), NULL);
+	free(buffer);
+	if(!leftover || *leftover)
+	{
+		free(leftover);
+		leftover = NULL;
+		return (NULL):
+	}
 	line = get_line(leftover);
 	new_leftover = get_leftover(leftover);
 	free(leftover);
