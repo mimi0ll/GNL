@@ -16,5 +16,12 @@
 #include <unistd.h>
 #include <stdlib.h>
 char	*get_next_line(int fd);
+size_t     strlen(char const *str); 
+char    *ft_strdup(const char *old);
+char    *strjoin(char const *old, char const *buffer);
+char    *get_line(char *leftover);
+char    *get_leftover(char *str);
+char    *read_until_newline(int fd, char *buffer, char **leftover);
+size_t	find_newline(char *str);
+char	*get_next_line(int fd);
 #endif
-
